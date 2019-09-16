@@ -1,0 +1,5 @@
+FROM bde2020/spark-worker
+
+ENV SPARK_WORKER_PORT 7078
+
+EXPOSE 7078
