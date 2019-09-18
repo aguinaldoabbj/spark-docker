@@ -10,8 +10,6 @@ ENV LIVY_HOME /livy
 
 ENV SPARK_HOME /spark
 
-#ENV SPARK_WORKER_PORT 7078 
-
 COPY start-livy.sh /
 
 # Alpine Linux comes with Python 2.7 by default
