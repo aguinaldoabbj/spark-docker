@@ -32,7 +32,7 @@ RUN   wget -c $LIVY_URL -O /tmp/livy-bin.zip \
       && cp ${LIVY_HOME}/conf/livy.conf.template ${LIVY_HOME}/conf/livy.conf \ 
       && cp ${LIVY_HOME}/conf/log4j.properties.template ${LIVY_HOME}/conf/log4j.properties 
         
-EXPOSE $LIVY_PORT $SPARK_DRIVER_PORT $SPARK_BLOCKMGR_PORT
+EXPOSE ${LIVY_PORT} ${SPARK_DRIVER_PORT} ${SPARK_BLOCKMGR_PORT}
 
 CMD bash /start-livy.sh
 
