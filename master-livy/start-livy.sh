@@ -1,8 +1,10 @@
 #!/bin/bash
 
 
-# Get Spark Master IP
-echo export SPARK_MASTER_IP=`hostname -i` > $HOME/.bashrc
+# Get Spark Master stuff
+echo export SPARK_MASTER_IP=`hostname -i` >> $HOME/.bashrc
+echo export SPARK_MASTER_HOST=`hostname` >> $HOME/.bashrc
+echo export SPARK_LOCAL_IP=`hostname -i` >> $HOME/.bashrc
 source $HOME/.bashrc
 
 #Start Spark Master from parent container
