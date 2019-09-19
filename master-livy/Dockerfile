@@ -23,7 +23,8 @@ RUN ln -sf /usr/bin/python${PYTHON_VERSION} /usr/bin/python \
 
 RUN apk update && apk add \
     unzip \
-    wget 
+    wget \
+    && rm -rf /var/cache/apk/*
         
 RUN   wget -c $LIVY_URL -O /tmp/livy-bin.zip \
       && unzip /tmp/livy-bin.zip -d /tmp/ \
