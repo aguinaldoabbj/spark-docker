@@ -3,6 +3,8 @@ FROM bde2020/spark-worker
 # Alpine Linux comes with Python 2.7 by default
 RUN ln -sf /usr/bin/python${PYTHON_VERSION} /usr/bin/python \
     && ln -sf /usr/bin/pip3 /usr/bin/pip
+    
+COPY worker.sh /
 
 ENV SPARK_WORKER_PORT 7078
 
