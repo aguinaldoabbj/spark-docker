@@ -1,8 +1,10 @@
 FROM bde2020/spark-worker
 
+ENV PYTHON_VERSION 3
+
 # Alpine Linux comes with Python 2.7 by default
 RUN ln -sf /usr/bin/python${PYTHON_VERSION} /usr/bin/python \
-    && ln -sf /usr/bin/pip3 /usr/bin/pip
+    && ln -sf /usr/bin/pip${PYTHON_VERSION} /usr/bin/pip
     
 COPY worker.sh /
 
