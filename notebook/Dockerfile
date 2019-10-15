@@ -4,7 +4,8 @@ USER root
 
 #gcc is a dependency of sparkmagic
 RUN apt update && apt install -y \
-    gcc
+    gcc \
+    git
         
 RUN pip install \
     pykube-ng \
