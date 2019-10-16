@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#preconfigure git
+git config --global user.name `hostname|cut -d - -f2`
+git config --global user.email `hostname|cut -d - -f2`
+
 set -x
 
 export JUPYTER_ENABLE_LAB=1
