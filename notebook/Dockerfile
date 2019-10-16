@@ -21,7 +21,8 @@ RUN /opt/conda/bin/jupyter labextension install @jupyter-widgets/jupyterlab-mana
   
 #fixing permissions
 RUN chown -R $NB_USER /usr/local/share/jupyter
-RUN chown -R $NB_USER /home/${NB_USER}/.local/share/jupyter/
+RUN chown -R $NB_USER /home/${NB_USER}
+#RUN chown -R $NB_USER /home/${NB_USER}/.local/share/jupyter/
 
 COPY prepare.sh /prepare.sh
 RUN chmod +x /prepare.sh
